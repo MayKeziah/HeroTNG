@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hero | TNG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#one">Team Members</a></li>
+							<li><a href="#two">Self-Assessment</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Hero: The Next Generation</h1>
+							<p>The third homework assignment for the Spring 2021 
+								CSS 385 Game Development course at UWB. Involves building off the last
+								assignment (Hero Creation/Deletion) to add waypoints and enemy patrol behavior. 
+							<!-- <ul class="actions">
+								<li><a href="https://canvas.uw.edu/courses/1465023/assignments/6193148" class="button scrolly">Assignment</a></li>
+							</ul> -->
+						<!-- <ul class="actions">
+							<li><a href="webglbuild.html" class="button">View WebGL build</a></li>
+						</ul> -->
+						<ul class="actions ">
+							<li><a href="build/index.html" class="button primary fit">View WebGL Build</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/Sonia.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Saravanan Sonia</h2>
+									<p>
+										Final year student from UWB graduating in August 2021 with major in CSSE and minor in
+										business administration. Especially interested in the possibilities of creative problem
+										solving especially in medical field or social issues through game development. 
+									</p>
+									<ul class="actions">
+										<li><a href="Sonia.html" class="button">Past Assignments</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="https://www.linkedin.com/in/keziahmay/" class="image"><img src="images/Keziah.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Keziah May</h2>
+									<p>Senior CSSE major at UWB graduating in June 2021. Interested in Game Development
+										because of the many interesting problems that must be solved to create a game. 
+										Hoping to learn how to be a better problem-solver.
+									</p>
+									<ul class="actions">
+										<li><a href="Kez.html" class="button">Past Assignments</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Self-Assessment</h2>
+							<p>We implemented all the listed requirements from the assignment page.</p>
+							<hr>
+							<h3>Controls</h3>
+							<ul>
+								<li>Key-M toggles between mouse or keyboard control.</li> 
+								<li>Mouse mode follows the cursor, keyboard mode uses WSAD</li>
+								<li>Space Bar spawns an egg. An egg is destroyed when</li>						
+								<ul><li>It reaches the bounds of the world</li>
+								<li>It collides with an enemy</li>
+								<li>It collides with a waypoint</li></ul>
+								
+							</ul> 
+							<h3>Waypoints</h3>
+							<ul>
+								<li>There are six waypoint objects in the system, names A to F.</li> 
+								<li>When a waypoint object collides with an egg, it loses 25% of its opacity. 
+								This can be implemented by decrease the alpha channel of the SpriteRenderer 
+								color by 0.25.</li>
+								<li>On the forth collision with an egg, a waypoint object will 
+								disappear and re-position itself in a new point that is randomly located at 
+								+ or - 15 units in both X and Y from the initial position of the waypoint.</li>
+								<li>H-key hides and shows waypoints</li>
+							</ul>
+							
+							<h3>Enemies</h3>
+							<ul>
+								<li>There are always 10 enemies in the world</li>
+								<li>Enemy is destroyed when if it comes in contact with the Hero or when hit with an egg</li>
+								<li>When an enemy is destroyed, a new one spawns</li>	
+								<li>An enemy sequences through the waypoints either sequentially (from A to F then back to A again) or randomly (waypoint chosen randomly)</li>	
+								<li>J-Key switches between sequential waypoints and random waypoints</li>	
+								<li>When a waypoint is moved, the enemy should move towards the new position</li>	
+							</ul>
+							<h3>Display</h3>
+							The display must include the game information as in the example (mouse/keyboard state, number of enemies touched, number of eggs in the world, number of enemies destroyed, cooldown for the egg)
+
+							<!-- <div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Egg</h3>
+									<p>Eggs spawned with a space bar and destroyed when out of bounds or collide with enemy/waypoint</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-lock"></span>
+									<h3>Enemy</h3>
+									<p>When a waypoint is moved, the enemy should move towards the new position. 
+										J-Key toggles between sequential (ie from A to F then A again) or random waypoints. 
+										Enemy is destroyed when collide with Hero or an egg. New enemy spawned when enemy destroyed. 
+                                                                        </p>
+								</section>
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h3>Waypoint</h3>
+									<p>
+									    Waypoint loses 25% of its opacity for each collision with an egg. On the 4th collision with an egg, 
+									    waypoint object will disappear and re-position itself in a new random point +/- 15 units in both X 
+									    and Y from the initial position of the waypoint. H-key hides and shows waypoints
+									</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Screen Controls</h3>
+									<p>
+									   Text display includes the following game information: mouse/WASD, number of enemies touched/destroyed, 
+									   number of eggs as well as counter for egg collision. In addition, Key M toggles between mouse or WASD control. 
+									</p> -->
+								</section>
+							<!-- </div>
+							<ul class="actions">
+								<li><a href="webglbuild.html" class="button">View WebGL build</a></li>
+							</ul>
+						</div> -->
+					</section>
+
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Keziah May and Saravanan Sonia . All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
